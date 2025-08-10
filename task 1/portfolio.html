@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rajmani sharma| Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Rajmani Sharma showcasing skills in frontend development, Python, C, and projects." />
+
+  <link rel="stylesheet" href="src/portfolio.css" />
+</head>
+
+<body>
+  <nav>
+    <h2 class="logo">Rajmani <span> Sharma</span></h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <div class="hero-section flip-container">
+      <div class="container-flip">
+        <img src="public/image/hero.webp" class="hero" alt="Rajmani sharma" id="flipImg" loading="lazy" />
+      </div>
+      <div class="hero-text">
+        <h1>Hello, I'm <br /><span>Rajmani Sharma</span></h1>
+        <p>Frontend Developer & Creative Coder</p>
+        <a href="#projects" class="cta">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-bottom-color">
+      <section id="about" class="glass-section">
+        <h2>About Me</h2>
+        <p>I'm a programmer skilled in HTML, CSS, and JavaScript with a focus on building responsive, user-friendly
+          websites. I enjoy solving problems through clean, efficient code and bringing ideas to life through modern web
+          development.</p>
+      </section>
+
+      <section id="skill-frontend" class="glass-section">
+        <h2>Skill</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>Frontend</h3>
+            <p>Frontend skills focus on creating responsive, user-friendly web designs with HTML, CSS, and JavaScript.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Python </h3>
+            <p>a simple and versatile language used for scripting, data handling, and web development. Known for clear
+              syntax and ease of use.</p>
+          </div>
+          <div class="card">
+            <h3>C language</h3>
+            <p>Learned all basic concepts of C language, including variables, loops, functions, arrays, and pointers.
+              Known for its fast performance and simplicity.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="glass-section">
+        <h2>Projects</h2>
+        <div class="card-grid">
+          <div class="card">
+            <a href="https://rajmaniZ.github.com/rajmaniZ/portfolio.git" target="_blank" rel="noopener noreferrer">
+              <h3>🌐 Portfolio Website</h3>
+              <p>Responsive portfolio using HTML, CSS, JS with modern design.</p>
+            </a>
+          </div>
+          <div class="card">
+            <a target="_blank" href="https://github.com/rajmaniZ/Trivia-Game.git" rel="noopener noreferrer">
+              <h3>Trivia Quiz Game🎯</h3>
+              <p>Trivia Quiz Game — a fun command-line game where you test your knowledge using real-time questions
+                fetched from the Open Trivia API!.</p>
+            </a>
+          </div>
+
+          <div class="card">
+            <a href="https://github.com/rajmaniZ/amazon-clone.git" target="_blank" rel="noopener noreferrer">
+              <h3>Amazon Clone </h3>
+              <p>A static Amazon homepage clone built with HTML, CSS, and JavaScript.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume-download" class="glass-section">
+        <a href="public/pdfs/resume.pdf" download>
+          <h3>Download Resume</h3>
+        </a>
+      </section>
+
+      <section id="connect" class="glass-section connect">
+        <h2>Connect with me</h2>
+        <p>Want to collaborate or say hi? Click below 👇</p>
+
+        <div class="icon-section">
+          <a href="https://instagram.com/raj_mani_8x_?igsh=MXJraTkwODFxMA==" class="icon" target="_blank"
+            rel="noopener noreferrer"><img src="public/icons/instagram.svg" alt="Instagram" loading="lazy"></a>
+
+          <a class="icon" href="https://www.linkedin.com/in/raj-sharma-6813b5330" target="_blank"
+            rel="noopener noreferrer"><img class="icon-img" src="public/icons/linkedin.svg" alt="Linkedin"
+              loading="lazy"></a>
+
+          <a class="icon" target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=denmarkacer@gmail.com"
+            rel="noopener noreferrer"><img class="icon-img" src="public/icons/mail.svg" alt="Gmail" loading="lazy"></a>
+
+          <a class="icon" target="_blank" href="https://github.com/rajmaniZ" rel="noopener noreferrer"><img
+              class="icon-img" src="public/icons/github.svg" alt="Github" loading="lazy"></a>
+
+          <a class="icon get-phone" role="button" aria-label="Show Phone Number" onclick="togglePhoneNumber()"><img
+              class="icon-img" id="getPhoneNumber" src="public/icons/phone-call.svg" alt="Phone No" loading="lazy"></a>
+        </div>
+
+        <p id="phone" style="display:none;">+91 89530-48802</p>
+
+      </section>
+
+      <footer>
+        <p>© 2025 Rajmani Sharma — Built with ❤️</p>
+      </footer>
+    </div>
+  </main>
+
+  <script defer src="./src/portfolio.js"></script>
+  <script>
+    function togglePhoneNumber() {
+      const phone = document.getElementById("phone");
+      if (phone.style.display === "none") {
+        phone.style.display = "block";
+      } else {
+        phone.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

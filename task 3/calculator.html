@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <h2>Calculator</h2>
+    <div id="alert-message">
+        "This calculator can't detect wrong syntax. Please check and enter the expression correctly."
+    </div>
+
+    <div id="content" class="glass-section">
+        <input id="display" type="text" class="card-grid">
+        <div class="numSymbol">
+
+            <input type="button" class="btn" value="X" onclick="cut()"></input>
+
+            <input type="button" class="btn" value="(" onclick="ClickOpenBracket()"></input>
+
+            <input type="button" class="btn" value=")"
+                onclick="currentDisplay=currentDisplay+')'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="c" onclick="allClear()"></input>
+
+            <input type="button" class="btn" value="7"
+                onclick="currentDisplay=currentDisplay+'7'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="8"
+                onclick="currentDisplay=currentDisplay+'8'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="9"
+                onclick="currentDisplay=currentDisplay+'9'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" id="/" class="btn" value="/" onclick="ClickSymbole('/')"></input>
+
+            <input type="button" class="btn" value="4"
+                onclick="currentDisplay=currentDisplay+'4'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="5"
+                onclick="currentDisplay=currentDisplay+'5'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="6"
+                onclick="currentDisplay=currentDisplay+'6'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" id="*" class="btn" value="*" onclick="ClickSymbole('*')"></input>
+
+            <input type="button" class="btn" value="1"
+                onclick="currentDisplay=currentDisplay+'1'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="2"
+                onclick="currentDisplay=currentDisplay+'2'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" class="btn" value="3"
+                onclick="currentDisplay=currentDisplay+'3'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" id="-" class="btn" value="-" onclick="ClickSymbole('-')"></input>
+
+            <input type="button" class="btn" value="0"
+                onclick="currentDisplay=currentDisplay+'0'; document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" value="." class="btn" onclick="ClickDecimal()"></input>
+
+            <input type="button" class="btn" value="=" onclick="
+        if(currentDisplay.slice(-1)=='.'){ currentDisplay=currentDisplay.slice(0,-1)+'0'; }
+        let result=eval(currentDisplay);
+        currentDisplay=result;
+        document.querySelector('#display').value=currentDisplay;"></input>
+
+            <input type="button" id="+" value="+" class="btn" onclick="ClickSymbole('+')"></input>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2025 Rajmani Sharma — Built with ❤️</p>
+    </footer>
+
+    <script src="calculator.js">
+
+    </script>
+</body>
+
+</html>
